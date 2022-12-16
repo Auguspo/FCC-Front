@@ -1,0 +1,15 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      #007bff 0%,
+      #007bff 50%,
+      #dc3545 50%,
+      #dc3545 100%
+    );
+  }
+
+ img{
+    width: 100%;
+ }
