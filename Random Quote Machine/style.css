@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 15px 0;
+  color: gray;
+  justify-content: right;
+  display: flex;
+}
+
+p {
+  font-style: italic;
+  margin: 0;
+  font-size: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
+}
+
+#quote-box {
+  width: 450px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+#tweet-quote {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+  display: inline-blick;
+  border-radius: 9999px;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #ffffff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+#new-quote {
+  display: inline-blick;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
