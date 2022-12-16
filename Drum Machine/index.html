@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Drum Machine</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./styles.css">
+    
+  </head>
+  <body>
+    <h1 class="text-center py-3">Drum Machine</h1>
+    <div class="container " id="drum-machine">
+
+        <div class="card my-3">
+            <div class="card-body my-3">
+                <h4 class="text-center " id="display">This display the current sound                    
+            </h4>
+            </div></div>
+            <div class="card border-0 bg-transparent ">
+            <button  onclick="play('Q')" class="drum-pad btn my-3 btn-primary btn-block" id="drum-1">Q<audio class="clip" src="./clip/Heater 1.mp3" id="Q"></button>
+            <button  onclick="play('W')" class="drum-pad btn my-3 btn-block btn-primary " id="drum-2">W<audio class="clip" src="./clip/Heater 2.mp3" id="W"></button>
+            <button  onclick="play('E')" class="drum-pad btn my-3 btn-primary btn-block" id="drum-3">E<audio class="clip" src="./clip/Heater 3.mp3" id="E"></button>
+            <button  onclick="play('A')" class="drum-pad btn my-3 btn-primary btn-block" id="drum-4">A<audio class="clip" src="./clip/Heater 4.mp3" id="A"></button>
+            <button  onclick="play('S')" class="drum-pad btn my-3 btn-primary btn-block" id="drum-5">S<audio class="clip" src="./clip/Clap.mp3" id="S"></button>
+            <button  onclick="play('D')" class="drum-pad btn my-3 btn-primary btn-block" id="drum-6">D<audio class="clip" src="./clip/Open HH.mp3" id="D"></button>
+            <button  onclick="play('Z')" class="drum-pad btn my-3 btn-primary btn-block" id="drum-7">Z<audio class="clip" src="./clip/Kick n' Hat.mp3" id="Z"></button>
+            <button  onclick="play('X')" class="drum-pad btn my-3 btn-primary btn-block" id="drum-8">X<audio class="clip" src="./clip/Kick.mp3" id="X"></button>
+            <button  onclick="play('C')" class="drum-pad btn my-3 btn-primary btn-block" id="drum-9">C<audio class="clip" src="./clip/Closed HH.mp3" id="C"></button>
+        </div>
+    </div>
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

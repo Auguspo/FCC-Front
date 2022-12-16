@@ -1,0 +1,18 @@
+#display{
+    background-color: rgba(rgba(252, 249, 249, 0.1))  ;
+    background: rgba(rgba(255, 0, 0, 0));
+}
+
+h1{
+    background-color: grey;
+    width:100%;
+}
+
+body{
+   
+    background: url("https://www.musicgrotto.com/wp-content/uploads/2022/07/drummer-holding-drum-sticks-hand-graphic-art.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
