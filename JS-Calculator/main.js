@@ -1,39 +1,68 @@
 let trailingResult = 0;
-let operationals = ["equals", "add", " multiply", "divide", "subtract"];
+let operationals = ["add", "multiply", "divide", "subtract","%"];
 let workingOperational = ""
 
 function updateDisplay(input) {
-
     let display = document.getElementById("display")
-    let secondDisplay = document.getElementById("secondDisplay")
+
 
 
     if (display.innerHTML === '0' && operationals.indexOf(input) === -1) {
-        display.innerHTML = input;
+        if (input === 'decimal') {
+            display.innerHTML = '0.' 
+        }else {
+            display.innerHTML = input; 
+        }   
     } else if (operationals.indexOf(input) >= 0) {
+        console.log("Dealing with a operation")
 
         if (workingOperational === "") {
             workingOperational = input
             trailingResult = display.innerHTML
             display.innerHTML = 0;
-            secondDisplay.innerHTML = trailingResult
+
         }
         else {
-            display.innerHTML = calculate(trailingResult, display.innerHTML, workingOperational)
-            trailingResult = display.innerHTML ;
-            workingOperational = ""
-            
+            trailingResult = calculate(trailingResult, display.innerHTML, workingOperational)
+            secondDisplay = trailingResult
+            display.innerHTML = 0
+            workingOperational = input
+
         }
     } else if (input === "equals") {
 
 
         display.innerHTML = calculate(trailingResult, display.innerHTML, workingOperational)
         trailingResult = display.innerHTML
-        workingOperational=""
-    } else {
+        workingOperational = ""
+
+    }
+    else if (input === "decimal") {
+
+        if (display.innerHTML.indexOf(".") === -1) { 
+            display.innerHTML += "." ;}
+            else
+            console.log("skipped the point")
+
+    }
+    else {
         display.innerHTML += input
 
     }
+
+}
+
+function last(){
+    document.getElementById("display").innerHTML = trailingResult
+}
+
+function clearOne(){
+    document.getElementById("display").innerHTML= document.getElementById("display").innerHTML.slice(0, -1);
+}
+function clearDisplay() {
+
+    trailingResult = 0
+    document.getElementById("display").innerHTML = "0"
 
 }
 
@@ -50,10 +79,13 @@ function calculate(first, second, operational) {
             result = first - second;
             break;
         case 'divide':
-            result = first / second;
+            result = (first) / second;
             break;
         case 'multiply':
             result = first * second;
+            break;
+        case '%':
+            result =  (first*second)/100;
             break;
 
         default:
@@ -61,16 +93,9 @@ function calculate(first, second, operational) {
 
 
     }
-    console.log(result.toString())
+
     return result.toString()
 
 }
 
-function clearDisplay() {
-    
-    trailingResult=0
-    document.getElementById("display").innerHTML = "0"
-    document.getElementById("secondDisplay").innerHTML = trailingResult
-    
-}
 

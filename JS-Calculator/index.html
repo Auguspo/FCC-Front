@@ -10,38 +10,54 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="./styles.css">
     <title>Calculator</title>
 </head>
 
 <body>
 
-<h1>Calculator</h1>
-<div class="container-fluid">
-<div class="bg-light text-center text-grey py-5 my-3" id="display">0</div>
-<div class="bg-light text-center text-grey py-5 my-3" id="secondDisplay">0</div>
-<button class="btn btn-block btn-warning"  onclick="clearDisplay()" id="clear">CE</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay('equals')" id="equals">=</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(1)" id="one">1</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(2)" id="two">2</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(3)" id="three">3</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(4)" id="four">4</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(5)" id="five">5</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(6)" id="six">6</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(7)" id="seven">7</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(8)" id="eight">8</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(9)" id="nine">9</button>
-<button class="btn btn-block btn-primary"  onclick="updateDisplay(0)" id="zero">0</button>
-<button class="btn btn-block btn-secondary"onclick="updateDisplay('.')"   id="decimal">.</button>
 
-<button class="btn btn-block btn-secondary"onclick="updateDisplay('divide')"   id="divide">/</button>
-<button class="btn btn-block btn-secondary"onclick="updateDisplay('multiply')"   id="multiply">X</button>
-<button class="btn btn-block btn-secondary"onclick="updateDisplay('add')"   id="add">+</button>
-<button class="btn btn-block btn-secondary"onclick="updateDisplay('subtract')"   id="subtract">-</button>
-</div>
+    <div class="calculator">
+        <h1>Calculator</h1> 
+        <div class="textbox" id="display">0</div>
+
+        <div class="buttons">
+            <button class="button" onclick="clearDisplay()" id="clear">AC</button>
+            <button class="button" onclick="clearOne()" >CE</button>
+            <button class="button" onclick="updateDisplay('%')">%</button>
+            <button class="button" onclick="updateDisplay('divide')" id="divide">/</button>
+
+            <button class="button" onclick="updateDisplay(7)" id="seven">7</button>
+            <button class="button" onclick="updateDisplay(8)" id="eight">8</button>
+            <button class="button" onclick="updateDisplay(9)" id="nine">9</button>
+            <button class="button" onclick="updateDisplay('multiply')" id="multiply">X</button>
+
+            <button class="button" onclick="updateDisplay(4)" id="four">4</button>
+            <button class="button" onclick="updateDisplay(5)" id="five">5</button>
+            <button class="button" onclick="updateDisplay(6)" id="six">6</button>
+            <button class="button" onclick="updateDisplay('subtract')" id="subtract">-</button>
 
 
-    <script src="./main.js" ></script>
+
+            <button class="button" onclick="updateDisplay(1)" id="one">1</button>         
+            <button class="button" onclick="updateDisplay(2)" id="two">2</button>
+            <button class="button" onclick="updateDisplay(3)" id="three">3</button>
+            <button class="button " onclick="updateDisplay('add')" id="add">+</button>
+
+            <button class="button " onclick="updateDisplay('decimal')" id="decimal">.</button>
+            <button class="button " onclick="updateDisplay(0)" id="zero">0</button>
+            <button class="button " onclick="last()" >Ans</button>
+
+            <button class="button " onclick="updateDisplay('equals')" id="equals">=</button>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="./main.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
